@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <FileVersion>1.25.0926.1</FileVersion>
+	<!--<PublishAot>true</PublishAot>-->
+	<!-- 可选：优化大小 -->
+	<!--<IlcOptimizationPreference>Size</IlcOptimizationPreference>-->
+	<!-- 可选：调试支持 -->
+	<!--<IlcGenerateDgmlFile>true</IlcGenerateDgmlFile>-->
+	<!--<IlcGenerateMapFile>true</IlcGenerateMapFile>-->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.11" />
+  </ItemGroup>
+
+</Project>
