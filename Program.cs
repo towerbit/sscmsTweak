@@ -114,10 +114,14 @@ namespace sscmsTweak
                                 usedImages.Add(duplicate.DuplicateWith); // 记录已使用的图片
 
                             var newSrc = duplicate.DuplicateWith.Replace(folder, "/")
-                                                                .Replace("\\", "/");
-                            Debug.Print($"替换 {src} 为 {newSrc}");
-                            body = body.Replace(src, newSrc);
-                            needUpdate = true;
+                                                                .Replace("\\", "/")
+                                                                .Replace("//", "/");
+                            if (!src.Equals(newSrc))
+                            {
+                                Console.WriteLine($"替换 {src} 为 {newSrc}");
+                                body = body.Replace(src, newSrc);
+                                needUpdate = true;
+                            }
                         }
                         else
                             if (!usedImages.Contains(imagePath))
